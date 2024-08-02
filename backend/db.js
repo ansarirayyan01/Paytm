@@ -1,6 +1,5 @@
-import mongoose from "mongoose";
-mongoose.connect("mongodb://localhost:27017/paytm")
-
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI)
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
